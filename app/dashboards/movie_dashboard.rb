@@ -10,7 +10,7 @@ class MovieDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,
-    description: Field::Text,
+    description: RichTextAreaField,
     year: Field::Number,
     duration: Field::String,
     genre: Field::String,

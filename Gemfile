@@ -26,6 +26,7 @@ gem 'devise'
 gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
 gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem "administrate"
+gem 'friendly_id', '~> 5.2.4'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

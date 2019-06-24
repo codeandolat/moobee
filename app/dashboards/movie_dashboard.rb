@@ -13,7 +13,7 @@ class MovieDashboard < Administrate::BaseDashboard
     description: RichTextAreaField,
     year: Field::Number,
     duration: Field::String,
-    genre: Field::String,
+    genre: Field::Select.with_options(collection: Genre.pluck(:name)),
     maturity_rating: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -27,7 +27,8 @@ class MovieDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :title,
-    :description,
+    :genre,
+    :duration,
     :year,
   ].freeze
 

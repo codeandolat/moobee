@@ -15,6 +15,7 @@ class MovieDashboard < Administrate::BaseDashboard
     duration: Field::String,
     genre: Field::Select.with_options(collection: Genre.pluck(:name)),
     maturity_rating: Field::String,
+    cover_image: Field::ActiveStorage.with_options({url_only: true}),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -38,6 +39,7 @@ class MovieDashboard < Administrate::BaseDashboard
     :id,
     :title,
     :description,
+    :cover_image,
     :year,
     :duration,
     :genre,
@@ -52,6 +54,7 @@ class MovieDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :title,
     :description,
+    :cover_image,
     :year,
     :duration,
     :genre,

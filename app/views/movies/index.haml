@@ -1,0 +1,11 @@
+%section
+  %h1 Find and rate movies!
+  %hr
+  .row
+    - @movies.each do |movie|
+      .col-md-3
+        .card.shadow
+          = image_tag movie.cover_image.variant(resize: "320x160"), class: 'card-img-top'
+          .card-body
+            %h5.card-title.text-center= movie.title
+            %h6.card-subtitle.text-muted.text-center= movie.year

@@ -29,7 +29,7 @@ gem "administrate"
 gem 'friendly_id', '~> 5.2.4'
 gem 'haml-rails', '~> 2.0'
 gem 'administrate-field-active_storage'
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
